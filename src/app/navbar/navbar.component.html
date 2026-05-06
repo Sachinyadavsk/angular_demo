@@ -1,0 +1,28 @@
+<nav class="bg-gray-900 text-white px-6 py-4">
+    <div class="flex items-center justify-between">
+
+        <!-- Logo -->
+        <h1 class="text-xl font-bold">MyApp</h1>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6">
+            <li><a routerLink="/" class="hover:text-yellow-400">Home</a></li>
+            <li><a routerLink="/about" class="hover:text-yellow-400">About</a></li>
+            <li><a routerLink="/contact" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Button -->
+        <button (click)="toggleMenu()" class="md:hidden focus:outline-none">
+            ☰
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div *ngIf="isOpen" class="mt-4 md:hidden">
+        <ul class="flex flex-col space-y-3">
+            <li><a routerLink="/" class="block">Home</a></li>
+            <li><a routerLink="/about" class="block">About</a></li>
+            <li><a routerLink="/contact" class="block">Contact</a></li>
+        </ul>
+    </div>
+</nav>

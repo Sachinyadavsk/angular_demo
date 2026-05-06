@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-service',
-  imports: [],
+  standalone: true,
   templateUrl: './service.html',
-  styleUrl: './service.css',
+  styleUrls: ['./service.css']
 })
-export class Service {}
+export class ServiceComponent {
+}
